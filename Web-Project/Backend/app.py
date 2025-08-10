@@ -8,12 +8,12 @@ app = Flask(__name__)
 CORS(app)  # Allow cross-origin requests for React frontend
 
 # Load the saved models
-earthquake_model = joblib.load('D:/Mini Project/Web-Project/Backend/earthquake_model.pkl')
-flood_model = joblib.load('D:/Mini Project/Web-Project/Backend/flood_model.pkl')
-forest_fire_model = joblib.load('D:/Mini Project/Web-Project/Backend/forest_fire_model.pkl')
+earthquake_model = joblib.load('C:/Users/Rajashree Bhat/Disaster-Prediction-ML-Project/Web-Project/Backend/earthquake_model.pkl')
+flood_model = joblib.load('C:/Users/Rajashree Bhat/Disaster-Prediction-ML-Project/Web-Project/Backend/flood_model.pkl')
+forest_fire_model = joblib.load('C:/Users/Rajashree Bhat/Disaster-Prediction-ML-Project/Web-Project/Backend/forest_fire_model.pkl')
 
 # Load the One-Hot Encoder for the Forest Fire model
-forest_fire_encoder = joblib.load('D:/Mini Project/Web-Project/Backend/one_hot_encoder.pkl')
+forest_fire_encoder = joblib.load('C:/Users/Rajashree Bhat/Disaster-Prediction-ML-Project/Web-Project/Backend/one_hot_encoder.pkl')
 
 @app.route('/predict', methods=['POST'])
 def predict():

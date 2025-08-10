@@ -20,8 +20,8 @@ const Contact = () => {
             Get in Touch
           </h1>
           <p className="text-md md:text-xl mt-4 text-gray-600 max-w-2xl mx-auto">
-            We’re here to answer any questions you may have. Reach out to us,
-            and we’ll respond as soon as we can.
+            I am  here to answer any questions you may have. Reach out to me,
+            and i will respond as soon as i can.
           </p>
         </section>
 
@@ -34,7 +34,7 @@ const Contact = () => {
                 Our Office
               </h2>
               <p className="text-sm md:text-base text-gray-600 mt-4">
-                BMS College Of Engineering, Bengaluru-560050
+                SJB Institute of Technology, Bengaluru-560060
               </p>
             </div>
 
