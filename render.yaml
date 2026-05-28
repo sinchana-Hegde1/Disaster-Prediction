@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: disaster-prediction-backend
+    runtime: python
+    rootDir: Web-Project/Backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+
+  - type: web
+    name: disaster-prediction-frontend
+    runtime: static
+    rootDir: Web-Project/Frontend
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./dist
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    envVars:
+      - key: VITE_API_URL
+        sync: false

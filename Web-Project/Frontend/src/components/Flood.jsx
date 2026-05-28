@@ -30,7 +30,8 @@ const FloodPredictionForm = () => {
     setError(""); // Clear previous errors
 
     try {
-      const response = await axios.post("http://127.0.0.1:5000/predict", {
+      const API_URL = import.meta.env.VITE_API_URL || "http://127.0.0.1:5000";
+      const response = await axios.post(`${API_URL}/predict`, {
         model_type: "flood",
         latitude: parseFloat(latitude),
         longitude: parseFloat(longitude),
